@@ -1,20 +1,65 @@
 .logo
 	// background: #FFF url(./image/logo.svg) 0 0 no-repeat
-	// width: 100%
+	// @media (min-width: 321px)
 	height: 100px
+	// width: 100%
+
+	// @media screen and (max-width: 320px)
 	// transform: scale(0.3)
 
 .header
-	background: green url(./image/background_tomato.jpeg) no-repeat fixed center 
-	background-size: 100%
-	background-position: center bottom
-	height: 600px
-	// background-clip: 
+	background: green url(./image/background_tomato.jpeg)
+	// background-attachment: fixed
+	background-repeat: no-repeat
+	background-position: bottom
+	background-size: cover 
+	height: 80vh
+	@media (min-width: 1400px)
+		margin-left: 5% 
+		margin-right: 5%
 
-html, body, .header 
-	border: 4px solid red
+a
+	color: white 
+	
+.navbar
+	border: 0
+	border-radius: 0
+	background-color: rgba(green, 0.4)
+
+.head_title
+	margin-top: 140px
+	margin-left: 120px
+	z-index: 1
+	position: relative
+
+	h1
+		font-size: 60px
+		font-weight: bold
+		&:nth-of-type(1)
+			color: white
+		&:nth-of-type(2)
+			color: red 
+
+.slider-fon
+	content: ''
+	background: lightgreen
+	height: 250px
+	transform: translateY(40px) skewY(8deg)
+	position: absolute
+
+.slider
+	&:before
+		content: ''
+		background: lightgreen
+		height: 250px
+		width: 100%
+		transform: translateY(40px) skewY(8deg)
+		position: absolute
+	
+	.sl-text:nth-of-type(n)
+		// display: none
 
 
-html, body
-	height: 100vh
+
+
 
