@@ -24,16 +24,22 @@
 					</div>
 					<div class="col-sm-6">
 						<form action="" class='order-form'>
-							<h3>Быстрый заказ</h3>
-							<div class="col-sm-6">
-								<label for="vid">Выберите вид</label>
-								<input type="image">
-							</div>
-							<div class="col-sm-6">
-								<label for="kol">Выберите количество</label>
-								<input type="number">
-								<button type="submit" class="btn btn-default">Купить</button>
-							</div>
+							<fieldset>
+								<legend>Быстрый заказ</legend>
+								<div class="col-sm-6">
+									<label for="vid">Выберите сорт</label>
+									<div class="sort">
+										<span class="glyphicon glyphicon-menu-left"></span>
+										<span class="glyphicon glyphicon-menu-right"></span>
+									</div>
+									<br>
+								</div>
+								<div class="col-sm-6">
+									<label for="kol">Выберите количество</label>
+									<input type="number" value=1 min=1 max=100>
+									<button type="submit" class="btn-tomato"><span class="glyphicons glyphicons-shopping-cart"></span>В корзину</button>
+								</div>
+							</fieldset>
 						</form>
 					</div>
 				</div>
@@ -41,4 +47,26 @@
 		</div>
 	</div>
 
+</section>
+
+<section class="section">
+	<div class="container">
+		<div class="row">
+			<div class="advice">
+				<div class="col-md-2 col-sm-2">
+					<div class="rassada-img rassada-img-up"></div>
+				</div>
+				<div class="col-sm-8 col-xs-12 sl-tr-rel">
+					<div class="">
+						<p>в открытый грунт пересаживайте в пасмурную погоду, в теплицу – вечером;
+							если погода после посадки ясная, притените высаженные растения от попадания прямых солнечных лучей на 2-3 дня.
+						</p>
+					</div>
+					<div class="col-md-2 col-sm-2">
+						<div class="rassada-img rassada-img-down"></div>
+					</div>
+				</div>			
+			</div>			
+		</div>
+	</div>
 </section>

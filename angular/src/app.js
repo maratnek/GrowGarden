@@ -15,7 +15,7 @@ $(document).ready(function(){
 		if (slideIndex > text.length) {
 			slideIndex = 1
 		} 
-		text[slideIndex-1].style.display = "block"; 
+		text.eq(slideIndex-1).show(); 
 		span.eq(slideIndex-1).addClass('sl-span-check');
 
     setTimeout(carousel, 5000);
