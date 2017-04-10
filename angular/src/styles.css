@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+	color: white;
+	background-color: #80ae77;
+	/*line-height: 1*/
+}
+
+
+	@media (min-width: 1400px){
+		body {
+			margin-left: 5%;
+			margin-right: 5%;
+		}
+	}
+

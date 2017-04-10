@@ -9,14 +9,10 @@
 
 .header
 	background: green url(./image/background_tomato.jpeg)
-	// background-attachment: fixed
 	background-repeat: no-repeat
 	background-position: bottom
 	background-size: cover 
 	height: 80vh
-	@media (min-width: 1400px)
-		margin-left: 5% 
-		margin-right: 5%
 
 a
 	color: white 
@@ -26,38 +22,100 @@ a
 	border-radius: 0
 	background-color: rgba(green, 0.4)
 
+.navbar-nav>li>a
+	color: white
+	&:hover
+		color: black
+
 .head_title
+	margin: 6%
 	margin-top: 140px
-	margin-left: 120px
 	z-index: 1
 	position: relative
 
 	h1
-		font-size: 60px
+		font-size: 5em
+		@media screen and (min-width: 321px) and (max-width: 748px)
+			font-size: 3em
+		@media screen and (max-width: 320px)
+			font-size: 2em
+
 		font-weight: bold
 		&:nth-of-type(1)
 			color: white
 		&:nth-of-type(2)
-			color: red 
+			color: red
+			text-transform: uppercase
 
-.slider-fon
-	content: ''
-	background: lightgreen
-	height: 250px
-	transform: translateY(40px) skewY(8deg)
-	position: absolute
 
 .slider
-	&:before
-		content: ''
-		background: lightgreen
+	position: relative
+	height: 260px
+	@media screen and (max-width: 320px)
+		height: 330px
+
+	.slider-fon
+		background: linear-gradient(left, rgba(0, 173, 76, 0.84), #007031);
 		height: 250px
 		width: 100%
-		transform: translateY(40px) skewY(8deg)
+		transform: translateY(-50px) skewY(8deg)
 		position: absolute
+		@media screen and (max-width: 320px)
+			height: 320px
+
+	.sl-text
+		text-align: center
+		margin-top: 3%
+		p
+			line-height: 1.7
 	
-	.sl-text:nth-of-type(n)
-		// display: none
+		&:nth-of-type(n)
+			display: none
+
+		&:nth-of-type(1)
+			display: block
+
+	.rassada-img
+		background-image: url("./image/rassada.svg")
+		background-repeat: no-repeat
+		background-position: center
+		background-size: 100% 100%
+		height: 150px
+		width: 100%
+		@media screen and (max-width: 770px)
+			display: none
+
+	$smech: 55px;		
+	.rassada-img-up
+		transform: translateY(-$smech)
+
+	.rassada-img-down
+		transform: translateY($smech)
+
+	.sl-span-center
+		text-align: center
+		position: absolute
+		bottom: 100px
+		.sl-span
+			width: 20px
+			height: 20px
+			border: 3px solid #664c3b
+			border-radius: 100%
+			position: absolute
+			background-color: rgba(white, 0.7)
+			&:nth-of-type(1)
+				transform: translateX(-300%)
+			&:nth-of-type(2)
+				transform: translateX(-150%)
+			&:nth-of-type(3)
+				transform: translateX(0px)
+			&:nth-of-type(4)
+				transform: translateX(150%)
+			&:nth-of-type(5)
+				transform: translateX(300%)
+
+		.sl-span-check
+				background-color: #664c3b
 
 
 
