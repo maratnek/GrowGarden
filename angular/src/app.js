@@ -6,7 +6,6 @@ $(document).ready(function(){
 	carousel();
 
 	function carousel() {
-		var i;
 		var text = $('.sl-text');
 		text.hide();
 		var span = $('.sl-span');
@@ -20,6 +19,7 @@ $(document).ready(function(){
 
     setTimeout(carousel, 5000);
   }
+
 
 });
 

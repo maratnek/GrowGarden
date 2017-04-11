@@ -20,7 +20,8 @@ a
 .navbar
 	border: 0
 	border-radius: 0
-	background: linear-gradient(left, rgba(0, 173, 76, 1), #007031);
+	background: linear-gradient(to left, rgba(0, 173, 76, 1), #007031);
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
 	// background-color: linear-gradient(left, rgba(0, 173, 76, 1), #007031)
 
 .navbar-nav>li>a
@@ -54,9 +55,16 @@ a
 	height: 260px
 	@media screen and (max-width: 320px)
 		height: 330px
+	&:before
+		content: ''
+		background: linear-gradient(to left, rgba(0, 173, 76, 1), #007031)
+		transform: translateY(-50px) skewY(8deg)
+		height: 250px
+		width: 100%
+		position: absolute
 
 	.slider-fon
-		background: linear-gradient(left, rgba(0, 173, 76, 1), #007031);
+		background: linear-gradient(to left, rgba(0, 173, 76, 1), #007031);
 		height: 250px
 		width: 100%
 		transform: translateY(-50px) skewY(8deg)

@@ -1,4 +1,4 @@
-<section class="section">
+<section class="first-section">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-8">
@@ -14,59 +14,125 @@
 				</ul>
 				</div>
 			</div>
-			<div class="col-sm-4 text-center">
+			<div class="col-sm-4 text-center urogai">
 				<img src="./image/urogai.svg" alt="урожай">
 			</div>
+		</div>
+	</div>
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-6 text-center hidden-xs">
-						<img src="./image/strelka.svg" alt="стрелка">
+					<div class="col-sm-4 col-md-6 hidden-xs">
+						<img class="img-responsive" src="./image/strelka.svg" alt="стрелка">
 					</div>
-					<div class="col-sm-6">
+					<div class="col-sm-8 col-md-6">
 						<form action="" class='order-form'>
 							<fieldset>
 								<legend>Быстрый заказ</legend>
 								<div class="col-sm-6">
 									<label for="vid">Выберите сорт</label>
-									<div class="sort">
-										<span class="glyphicon glyphicon-menu-left"></span>
-										<span class="glyphicon glyphicon-menu-right"></span>
+									<div id="sort">
+										<button class="" (click)="plusDivs(-1)">
+											<span class="glyphicon glyphicon-menu-left"></span>
+										</button>
+										<button class="" (click)="plusDivs(1)">
+											<span class="glyphicon glyphicon-menu-right"></span>
+										</button>
+										<img src="./image/tomato.svg" alt="">
 									</div>
 									<br>
 								</div>
 								<div class="col-sm-6">
 									<label for="kol">Выберите количество</label>
 									<input type="number" value=1 min=1 max=100>
-									<button type="submit" class="btn-tomato"><span class="glyphicons glyphicons-shopping-cart"></span>В корзину</button>
+									<button type="submit" class="btn-tomato"><span class="glyphicons glyphicons-shopping-cart"></span> В корзину <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></button>
 								</div>
 							</fieldset>
 						</form>
 					</div>
 				</div>
-			</div>
-		</div>
+
 	</div>
 
 </section>
 
 <section class="section">
+	<div class="tom-container">
+		<div class="col-sm-2 hidden-xs">
+			<div class="rassada-img rassada-img-up"></div>
+		</div>
+		<div class="col-sm-8 col-xs-12 sl-tr-rel">
+			<div class="text-center">
+				<div class="text-right">
+					<i class="fa fa-quote-right" aria-hidden="true"></i>
+				</div>
+				<p>В открытый грунт пересаживайте в пасмурную погоду, в теплицу – вечером.
+				</p>
+				<p>
+					Если погода после посадки ясная, притените высаженные растения от попадания прямых солнечных лучей на 2-3 дня.
+				</p>
+				<div class="text-left">
+					<i class="fa fa-quote-right" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-2 hidden-xs">
+			<div class="rassada-img rassada-img-down"></div>
+		</div>
+	</div>
+</section>
+
+<section class="rassadi-section">
 	<div class="container">
 		<div class="row">
-			<div class="advice">
-				<div class="col-md-2 col-sm-2">
-					<div class="rassada-img rassada-img-up"></div>
+			<h2>Наши Рассады</h2>
+			<div class="col-sm-4 col-xs-12">
+			<div class="cart">
+				<h3 class="cart-name">Бычье сердце</h3>
+				<div class="cart-body">
+					<div class="pic"><img src="./image/TomatGallery/BichieCerdce/bichie-cerdce.jpg" alt=""></div>
+					<div class="tomat"></div>
+					<div class="rassada"></div>
 				</div>
-				<div class="col-sm-8 col-xs-12 sl-tr-rel">
-					<div class="">
-						<p>в открытый грунт пересаживайте в пасмурную погоду, в теплицу – вечером;
-							если погода после посадки ясная, притените высаженные растения от попадания прямых солнечных лучей на 2-3 дня.
-						</p>
-					</div>
-					<div class="col-md-2 col-sm-2">
-						<div class="rassada-img rassada-img-down"></div>
-					</div>
-				</div>			
-			</div>			
+			</div>
+			</div>
+			<div class="col-sm-4 col-xs-12">
+			<div class="cart">
+				<h3 class="cart-name">Бычье сердце</h3>
+				<div class="cart-body">
+					<div class="pic"><img src="./image/TomatGallery/BichieCerdce/bichie-cerdce.jpg" alt=""></div>
+					<div class="tomat"></div>
+					<div class="rassada"></div>
+				</div>
+			</div>
+			</div>
+			<div class="col-sm-4 col-xs-12">
+			<div class="cart">
+				<h3 class="cart-name">Бычье сердце</h3>
+				<div class="cart-body">
+					<div class="pic"><img src="./image/TomatGallery/BichieCerdce/bichie-cerdce.jpg" alt=""></div>
+					<div class="tomat"></div>
+					<div class="rassada"></div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="our-number">
+	<div class="tom-container">
+		<div class="col-sm-2 hidden-xs">
+			<div class="rassada-img rassada-img-up"></div>
+		</div>
+		<div class="col-sm-8 col-xs-12 sl-tr-rel">
+			<div class="text-left">
+				<h2>Наши цифры</h2>
+				<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+				<div class="pokazatel"></div>
+			</div>
+		</div>
+		<div class="col-sm-2 hidden-xs">
+			<div class="rassada-img rassada-img-down"></div>
 		</div>
 	</div>
 </section>
