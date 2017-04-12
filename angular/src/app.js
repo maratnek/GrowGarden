@@ -19,6 +19,19 @@ $(document).ready(function(){
 
     setTimeout(carousel, 5000);
   }
+  $('section:last').css('background-color: red');
+
+  // $.ajax({
+  // 	method:'GET',
+  // 	url: 'https://jsonplaceholder.typicode.com/photos',
+  // 	dataType: 'json'
+  // }).done(function(data) {
+  // 		console.log(data);
+  // 		$.map(data, function(post, i){
+  // 			$('#jsonholder').append('<h2>' + post.title + '</h2><img src="' + 
+  // 				post.url + '"><p>' + post.thumbnailUrl + '</p>');
+  // 		})
+  // });
 
 
 });

@@ -116,7 +116,6 @@
 	h2
 		text-align: center
 		margin-bottom: 20px
-	.tom-center
 	.cart
 		margin: auto
 		max-width: 190px
@@ -133,10 +132,10 @@
 			padding-bottom: 12%
 			img
 				background-color: white
-				padding-top: 20px
-				padding-bottom: 20px
-				width: 100%
-				height: 100%
+				// padding-top: 20px
+				// padding-bottom: 20px
+				// width: 100%
+				//height: 200px
 				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
 			.tom
 				margin-top: 20px
@@ -150,10 +149,44 @@
 				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
 
 
+// .vcenter 
+// 	display: flex
+// 	float: none
+// 	vertical-align: middle
 
+// .vparent
+// 	display: table
+// 	width: 100%
+// 	background: #e0e0e0
+// 	height: 60px
 
-
-
+// .vchild 
+// 	display: table-cell
+// 	vertical-align: middle
+// 	text-align:center
 
 .our-number
-	margin-top: 200px
+
+	.tom-container
+		&:before
+			height: 400px
+			@media screen and (max-width: 770px)
+				height: 500px
+	h2
+		margin-bottom: 40px
+	ul
+		list-style-type: none
+		padding: 0
+		.progress
+			background: none
+			box-shadow: none
+			// height: 20px
+			border-radius: 0
+			position: relative
+			.progress-bar
+				background: linear-gradient(to left, #977762, #5f4738)
+				height: 5px
+				border: 0
+				box-shadow: none
+				position: absolute
+				top: 50%
