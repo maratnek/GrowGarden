@@ -19,7 +19,25 @@ $(document).ready(function(){
 
     setTimeout(carousel, 5000);
   }
-  $('section:last').css('background-color: red');
+
+  $('.cart-body .ras').on('click', function(event) {
+  	var cartBody = $(this).parents('.cart-body')
+  	var cartImg = cartBody.find('img');
+  	cartImg.eq(0).removeClass('show').addClass('hide');
+  	cartImg.eq(1).removeClass('hide').addClass('show');
+  });
+
+  $('.cart-body .tom').on('click', function(event) {
+  	var cartBody = $(this).parents('.cart-body')
+  	var cartImg = cartBody.find('img');
+  	cartImg.eq(1).removeClass('show').addClass('hide');
+  	cartImg.eq(0).removeClass('hide').addClass('show');
+  });
+  $('.cart-body .cart-size').on('click', function(ev){
+
+  	$(this).parents('#cart-size').toggleClass('img-size');
+  	console.log($(this));
+  });
 
   // $.ajax({
   // 	method:'GET',
