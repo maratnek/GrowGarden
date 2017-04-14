@@ -135,6 +135,10 @@
 	max-height: 100%
 	
 .rassadi-section
+	// background: green url(./image/zemlya.jpg)
+	background-repeat: no-repeat
+	background-position: bottom
+	background-size: cover 
 	h2
 		text-align: center
 		margin-bottom: 30px
@@ -172,27 +176,12 @@
 				height: 60px
 
 
-// .vcenter 
-// 	display: flex
-// 	float: none
-// 	vertical-align: middle
-
-// .vparent
-// 	display: table
-// 	width: 100%
-// 	background: #e0e0e0
-// 	height: 60px
-
-// .vchild 
-// 	display: table-cell
-// 	vertical-align: middle
-// 	text-align:center
-
 .our-number
-
+	.container	
+		min-width: 100%
 	.tom-container
 		&:before
-			height: 400px
+			height: 450px
 			@media screen and (max-width: 770px)
 				height: 500px
 	h2
@@ -213,3 +202,19 @@
 				box-shadow: none
 				position: absolute
 				top: 50%
+
+.our-work
+	background: green url(./image/zemlya.jpg)
+	background-repeat: no-repeat
+	background-position: bottom
+	background-size: cover 
+	.row
+		margin-top: 100px
+
+	img
+		margin-top: 40px		
+		margin-bottom: 40px		
+		// width: 70%
+	p	
+		max-width: 200px
+		margin: auto
