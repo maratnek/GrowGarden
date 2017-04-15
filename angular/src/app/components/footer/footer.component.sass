@@ -1,0 +1,83 @@
+footer
+	.container
+		min-width: 100%
+	.tom-container
+		position: relative
+		height: 260px
+		background: linear-gradient(to left, #00ad4c, #007031)
+		@media screen and (max-width: 320px)
+			height: 330px
+		&:after
+			content: ''
+			background: linear-gradient(to left, #00ad4c, #007031)
+			transform: translateY(30px)
+			z-index: -1
+			height: 250px
+			width: 100%
+			position: absolute
+			top: 0
+			left: 0
+		&:before
+			content: ''
+			background: linear-gradient(to left, rgba(0, 173, 76, 1), #007031)
+			transform: translateY(-90px) skewY(8deg)
+			height: 210px
+			top: 0
+			left: 0
+			width: 100%
+			position: absolute
+		.tom-container-up
+			// transform: translateY(-90px) 
+			margin-top: -110px
+			margin-left: 20px
+			h3
+				margin-bottom: 20px
+
+			.order-form
+				background: linear-gradient(to left,  rgba(0, 173, 76, 1), #007031)
+				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+				padding: 20px
+				color: #333
+				label
+					font-weight: normal
+					margin-bottom: 10px
+				#sort
+					width: 100%
+					height: 200px
+					background-color: white
+					button
+						background-color: rgba(white, 0)
+						border: 0
+						position: absolute
+						top: 50%
+						font-size: 2em
+						&:hover 
+							border: 0px solid red
+						
+						&:nth-of-type(1)
+							left: 5%
+						&:nth-of-type(2)
+							right: 5%
+					img
+						width: 100%
+						height: 100%
+
+				input, .btn-tomato
+					width: 100%
+					text-align: center
+					padding: 2%
+					height: 40px
+					margin: 0
+				input
+					margin-bottom: 120px
+					@media (max-width: 768px)
+						margin-bottom: 40px
+				.btn-tomato
+					width: 100%	
+					&:hover
+						box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+						transition: box-shadow .15s
+
+
+
+

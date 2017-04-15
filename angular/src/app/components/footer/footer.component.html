@@ -1,13 +1,40 @@
 <footer>
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-6">
-				<h3>Сделать заказ</h3>
-				<form action="">
-					
-				</form>
+			<div class="tom-container">
+				<div class="col-sm-6 tom-container-up">
+					<h3>Сделать заказ</h3>
+					<form action="" class='order-form'>
+						<fieldset>
+							<!-- <legend>Быстрый заказ</legend> -->
+							<!-- <div class="container"> -->
+								<div class="row">
+									<div class="col-sm-6">
+										<label for="vid">Выберите сорт</label>
+										<div id="sort">
+											<button class="" (click)="plusDivs(-1)">
+												<span class="glyphicon glyphicon-menu-left"></span>
+											</button>
+											<button class="" (click)="plusDivs(1)">
+												<span class="glyphicon glyphicon-menu-right"></span>
+											</button>
+											<img src="./image/tomato.svg" alt="">
+										</div>
+										<br>
+									</div>
+									<div class="col-sm-6">
+										<label for="kol">Выберите количество</label>
+										<input type="number" value=1 min=1 max=100>
+										<button type="submit" class="btn-tomato"><span class="glyphicons glyphicons-shopping-cart"></span> В корзину <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></button>
+									</div>
+								<!-- </div> -->
+							</div>
+						</fieldset>
+					</form>
+				</div>
+				<div class="col-sm-6"></div>
 			</div>
-			<div class="col-sm-6"></div>
 		</div>
 	</div>
 </footer>
+

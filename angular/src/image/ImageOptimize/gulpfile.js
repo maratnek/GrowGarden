@@ -38,8 +38,8 @@ gulp.task('image', ['imagesmall'], function () {
 gulp.task('imagesmall', function () {
     return gulp.src(src)
         .pipe(imageResize({
-            width : 600,
             height: 700,
+            width : 600,
             crop  : true,
             upscale: true
         }))
