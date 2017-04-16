@@ -1,17 +1,117 @@
+<section>
+			
+			<div class="slider">
+				<div class="col-md-2 col-sm-2">
+					<div class="rassada-img rassada-img-up"></div>
+				</div>
+				<div class="col-sm-8 col-xs-12 sl-tr-rel">
+					<div class="sl-text">
+						<p>Здоровая рассада помидор – гарантия обильного урожая томатов. Ошибки, которые допускают начинающие огородники на стадии посева семян и взращивания рассады, обязательно скажутся на плодоношении взрослого растения. В этом деле мелочей быть не может</p>
+					</div>
+					<div class="sl-text">
+						<p>Рассады в торфяных и пластиковых горшочках на посадку в теплицу или на открытом месте при благоприятном климате</p>
+					</div>
+					<div class="sl-text">
+						<p>Лучшие условия для томатов это тепличные условия</p>
+					</div>
+					<div class="sl-text">
+						<p>Хороший урожай вкусных сочных томатов</p>
+					</div>
+					<div class="sl-text">
+						<p>Лучшие условия для томатов это тепличные условия</p>
+					</div>
+				</div>
+				<div class="col-md-2 col-sm-2">
+					<div class="rassada-img rassada-img-down"></div>
+				</div>
+				<div class="col-xs-12 sl-span-center">
+					<span class="sl-span sl-span-1"></span>
+					<span class="sl-span sl-span-2"></span>
+					<span class="sl-span sl-span-3"></span>
+					<span class="sl-span sl-span-4"></span>
+					<span class="sl-span sl-span-5"></span>
+				</div>
+			</div>
+
+</section>	
+
+<section>
+<!-- 	<div class="container">
+		<div class="row">
+			<div *ngFor="let gallery of gallerys; let i = index;">
+				<div class="col-sm-4 text-center" *ngIf="i < 25">
+					<span class="label label-default">album: {{gallery.albumId}}</span>
+					<span class="label label-primary">Id: {{gallery.id}}</span>
+					<br>
+					<img class="thumbnail center-block" src={{gallery.thumbnailUrl}} alt="">
+					<p>{{gallery.title}}</p>
+				</div>
+				<div class="clearfix" *ngIf="i%3==2"></div>
+			</div>
+		</div>
+	</div> -->
+	<div class="container">
+		<div class="row">
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+<!-- 					<li data-target="#carousel-example-generic" data-slide-to="0" *ngFor="let gallery of gallerys; let i = index;" [ngClass]="{'active': i == 0}" *ngIf="i<10"></li>
+ -->					
+ 					<div *ngFor="let gallery of gallerys; let i = index;" >
+						<li *ngIf="i<10" [ngClass]="{'active': i == 0}" data-target="#carousel-example-generic" data-slide-to="{{gallery.id}}-1"></li>
+					</div>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					
+					<div class="item" *ngFor="let gallery of gallerys; let i = index;" [ngClass]="{'active': i == 0}">
+						<div *ngIf="i<10">
+							<img class="center-block" src={{gallery.thumbnailUrl}} alt="">
+							<div class="carousel-caption">
+								<p>{{gallery.title}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Controls -->
+				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+</section>
+
 <section class="first-section">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-8">
-			 <div class="preimuch">
-				<h2 class="text-center">Прeимущества</h2>
-				<ul>
-					<li>из наших рассад Вы получите богатый урожай томатов</li>
-					<li>не мучайте себя постоянными пересадками рассады в горшки, этот долгий процесс мы берем на себя</li>
-					<li>на ранней стадии ростления растения требуют большого ухода </li>
-					<li>нет смысла загромождать дом большим количеством рассад,проще взять готовые саженцы в начале дачного сезона</li>
-					<li>вечная головная боль выбора времени посадки семян, чтобы успеть в срок, а погода нам приподносит разные ситуации</li>
-					<li>просто выберите количество и оплатить и мы сами привезем Вам рассады</li>
-				</ul>
+				<div class="preimuch">
+					<h2 class="text-center">Прeимущества</h2>
+						<div class="row">
+							<div class="col-sm-6">
+								<ul>
+									<li>из наших рассад Вы получите богатый урожай томатов</li>
+									<li>не мучайте себя постоянными пересадками рассады в горшки, этот долгий процесс мы берем на себя</li>
+									<li>просто выберите количество и оплатить и мы сами привезем Вам рассады</li>
+								</ul>
+							</div>
+							<div class="col-sm-6">
+								<ul>
+									<li>на ранней стадии ростления растения требуют большого ухода </li>
+									<li>нет смысла загромождать дом большим количеством рассад,проще взять готовые саженцы в начале дачного сезона</li>
+									<li>вечная головная боль выбора времени посадки семян, чтобы успеть в срок, а погода нам приподносит разные ситуации</li>
+								</ul>
+							</div>
+					</div>
 				</div>
 			</div>
 			<div class="col-sm-4 text-center urogai">

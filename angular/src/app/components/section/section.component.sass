@@ -1,22 +1,107 @@
+.slider
+	margin-top: -50px
+	position: relative
+	height: 260px
+	@media screen and (max-width: 320px)
+		height: 330px
+	&:before
+		content: ''
+		background: linear-gradient(to left, rgba(0, 173, 76, 1), #007031)
+		transform: translateY(-50px) skewY(8deg)
+		height: 250px
+		width: 100%
+		position: absolute
+
+	.slider-fon
+		background: linear-gradient(to left, rgba(0, 173, 76, 1), #007031);
+		height: 250px
+		width: 100%
+		transform: translateY(-50px) skewY(8deg)
+		position: absolute
+		@media screen and (max-width: 320px)
+			height: 320px
+
+	.sl-text
+		text-align: center
+		margin-top: 3%
+		p
+			line-height: 1.7
+	
+		&:nth-of-type(n)
+			display: none
+
+		&:nth-of-type(1)
+			display: block
+
+	.rassada-img
+		background-image: url("./image/rassada.svg")
+		background-repeat: no-repeat
+		background-position: center
+		background-size: 100% 100%
+		height: 150px
+		width: 100%
+		@media screen and (max-width: 770px)
+			display: none
+
+	$smech: 55px;		
+	.rassada-img-up
+		transform: translateY(-$smech)
+
+	.rassada-img-down
+		transform: translateY($smech)
+
+	.sl-span-center
+		text-align: center
+		position: absolute
+		bottom: 100px
+		.sl-span
+			width: 20px
+			height: 20px
+			border: 3px solid #664c3b
+			border-radius: 100%
+			position: absolute
+			background-color: rgba(white, 0.7)
+			&:nth-of-type(1)
+				transform: translateX(-300%)
+			&:nth-of-type(2)
+				transform: translateX(-150%)
+			&:nth-of-type(3)
+				transform: translateX(0px)
+			&:nth-of-type(4)
+				transform: translateX(150%)
+			&:nth-of-type(5)
+				transform: translateX(300%)
+
+		.sl-span-check
+				background-color: #664c3b
+
 .first-section
-	margin-top: 200px
+	// margin-top: 200px
 
 	.preimuch
 		// margin-left: 20px
 		h2
-			margin-bottom: 20px
+			margin-bottom: 40px
 			font-size: 2.5em
 		ul
 			list-style-type: none
-			margin-left: 5% 
-			margin-right: 5%
+			// margin-left: 5% 
+			// margin-right: 5%
 			list-style-image: url('./image/tomato.svg')
+			list-style-position: inside
 			margin-bottom: 20px
 		li
-			margin-bottom: 10px
+			border: 1px solid white
+			margin-bottom: 30px
+			padding: 10px
+			line-height: 1.7
+
+		// ul > li
+
 
 	.urogai
 		margin-bottom: 20px
+		margin-top: 20px
 		img
 			box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 			border-radius: 10%
@@ -27,6 +112,7 @@
 		padding: 40px
 		color: #333
 		padding-bottom: 40px
+		margin-top: 40px
 		label
 			font-weight: normal
 			margin-bottom: 10px
