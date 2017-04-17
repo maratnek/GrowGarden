@@ -52,27 +52,24 @@
 	</div> -->
 	<div class="container">
 		<div class="row">
-		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 				<!-- Indicators -->
 				<ol class="carousel-indicators">
-<!-- 					<li data-target="#carousel-example-generic" data-slide-to="0" *ngFor="let gallery of gallerys; let i = index;" [ngClass]="{'active': i == 0}" *ngIf="i<10"></li>
- -->					
- 					<div *ngFor="let gallery of gallerys; let i = index;" >
-						<li *ngIf="i<10" [ngClass]="{'active': i == 0}" data-target="#carousel-example-generic" data-slide-to="{{gallery.id}}-1"></li>
-					</div>
+					<ng-container *ngFor="let gallery of gallerys; let i = index;" >
+						<li [attr.data-slide-to]="i" *ngIf="i<10" [ngClass]="{'active': i == 0}" data-target="#carousel-example-generic" ></li>
+					</ng-container>
 				</ol>
 
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
-					
-					<div class="item" *ngFor="let gallery of gallerys; let i = index;" [ngClass]="{'active': i == 0}">
-						<div *ngIf="i<10">
+					<ng-container *ngFor="let gallery of gallerys; let i = index;">
+						<div class="item" *ngIf="i<10" [ngClass]="{'active': i == 0}">
 							<img class="center-block" src={{gallery.thumbnailUrl}} alt="">
 							<div class="carousel-caption">
 								<p>{{gallery.title}}</p>
 							</div>
 						</div>
-					</div>
+					</ng-container>
 				</div>
 
 				<!-- Controls -->
