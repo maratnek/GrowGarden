@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import 'rxjs/add/operator/map';
+import { Http, Headers } from '@angular/http';
+import 'rxjs/Rx';
 
 @Injectable()
 export class GalleryService {
@@ -10,8 +10,12 @@ export class GalleryService {
   }
 
   getGallery(){
-  	return this.http.get('https://jsonplaceholder.typicode.com/photos').
-  	map(res => res.json());
+  	return this.http.get('http://localhost:4200/image/resource.json')
+        .flatMap((data) => data.json())
+        ;
+  	// return this.http.get('http://jsonplaceholder.typicode.com/photos')
+   //      .flatMap((data) => data.json())
+   //      ;
   }
 
 }
