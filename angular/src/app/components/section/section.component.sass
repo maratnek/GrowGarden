@@ -119,13 +119,14 @@
 		#sort
 			width: 100%
 			height: 200px
-			background-color: white
+			// background-color: white
 			button
 				background-color: rgba(white, 0)
 				border: 0
 				position: absolute
 				top: 50%
 				font-size: 2em
+				z-index: 2
 				&:hover 
 					border: 0px solid red
 				
@@ -133,20 +134,26 @@
 					left: 5%
 				&:nth-of-type(2)
 					right: 5%
-			img
-				width: 100%
-				height: 100%
+			figure
+				figcaption
+					text-align: center
+					color: white
+			// img
+			// 	width: 100%
+			// 	height: 100%
 
-		input, .btn-tomato, label
+		input, .btn-tomato, .price
 			width: 100%
 			text-align: center
 			padding: 2%
 			height: 40px
-			margin: 0
-		input + label
+			margin: 0 0 20px 0px
+		.price
+			text-align: center
 			background-color: white
+			padding-top: 10px
 			color: #333
-			width: 100%
+			margin-bottom: 40px
 		// input
 		// 	margin-bottom: 120px
 		// 	@media (max-width: 768px)
@@ -156,6 +163,55 @@
 			&:hover
 				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
 				transition: box-shadow .15s
+
+.shop-cart
+	position: fixed
+	height: 50px
+	width: 100px
+	color: white
+	z-index: 3
+	right: 40px
+	top: 40px
+	// border: 3px solid white
+	// padding-top: 10px
+	// border-radius: 50%
+	text-align: center
+	font-size: 2em
+	cursor: pointer
+	.fa-arrow-right
+		margin-right: 15px
+		animation: 2s arrow-right infinite ease-out
+		@keyframes arrow-right
+			0%
+				opacity: 1
+				transform: scale(1) translateX(-10px)
+			100%
+				opacity: 0
+				transform: scale(1.5) translateX(-10px)
+
+
+	&:after
+		content: ''
+		position: absolute
+		border: 3px solid white
+		border-radius: 50%
+		height: 50px
+		width: 50px
+		top: -3px
+		right: -4px
+		z-index: 3
+		transform: scale(1.3)
+		animation: 2s shop-cart-anim infinite ease-out
+
+@keyframes shop-cart-anim
+	0%
+		opacity: 1
+		transform: scale(1.3)
+	100%
+		opacity: 0
+		transform: scale(1.5)
+
+
 
 .animate
 	animation: 50ms formkey 17

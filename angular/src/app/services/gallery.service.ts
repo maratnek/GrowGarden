@@ -10,7 +10,7 @@ export class GalleryService {
   }
 
   getGallery(){
-  	return this.http.get('http://localhost:4200/image/resource.json')
+  	return this.http.get('./image/resource.json')
         .flatMap((data) => data.json())
         ;
   	// return this.http.get('http://jsonplaceholder.typicode.com/photos')

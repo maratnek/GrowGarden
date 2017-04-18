@@ -7,18 +7,23 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SectionComponent } from './components/section/section.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ShopCartComponent } from './components/shop-cart/shop-cart.component';
+import { routing } from './app.routing';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SectionComponent,
-    FooterComponent
+    FooterComponent,
+    ShopCartComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

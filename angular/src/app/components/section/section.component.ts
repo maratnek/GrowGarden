@@ -13,20 +13,21 @@ export class SectionComponent implements OnInit {
 	gallerys = [];
 	clearFix: boolean;
 	name: string;
+	title: string;
 	imgAnimate = true;
 	price = 0;
+	isSpecial = false;
 
 
   constructor(private photoS: GalleryService) { 
   	this.sortIndex = 0; 
     this.name = "./image/TomatGallery/tornadof1.jpg";
-    this.price = 0;
+    this.price = 10;
+    this.title = "Торнадо";
 
-  	console.log(this.photoS.getGallery()	
+  	this.photoS.getGallery()	
         // .filter((gl: any) => gl.id < 25)
-        .subscribe((res:any) => this.gallerys.push(res))
-        );
-  	console.log(this.gallerys);
+        .subscribe((res:any) => this.gallerys.push(res));
 
   }
 
@@ -37,11 +38,9 @@ export class SectionComponent implements OnInit {
 
 	showDivs(n) {
 		this.imgAnimate = true;
-		console.log(this.gallerys.length);
-		console.log(n);
 		this.name = this.gallerys[n].path + this.gallerys[n].urlTom;
 		this.price = this.gallerys[n].price;
-		console.log(this.name);
+		this.title = this.gallerys[n].title;
 	}
 
 	plusDivs(n) {
@@ -52,9 +51,11 @@ export class SectionComponent implements OnInit {
 	  else if (this.sortIndex >= this.gallerys.length)
 	  	this.sortIndex = 0;
 	  this.showDivs(this.sortIndex);
+	}
 
-
-
+	shopCartClick(){
+		console.log('Shop Cart Click');
+		this.isSpecial = true;
 	}
 
 
