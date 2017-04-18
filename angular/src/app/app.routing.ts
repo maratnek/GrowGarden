@@ -2,15 +2,13 @@ import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
 import { ShopCartComponent } from './components/shop-cart/shop-cart.component';
-import { HeaderComponent } from './components/header/header.component';
-// import { SectionComponent } from './components/section/section.component';
-// import { FooterComponent } from './components/footer/footer.component';
+import { MainComponent } from './components/main/main.component';
 
 
 const appRoutes: Routes = [
 	{
 		path: '',
-		component: HeaderComponent	
+		component: MainComponent	
 	},
 	{
 		path: 'shop-cart',

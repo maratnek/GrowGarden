@@ -9,6 +9,7 @@ import { SectionComponent } from './components/section/section.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ShopCartComponent } from './components/shop-cart/shop-cart.component';
 import { routing } from './app.routing';
+import { MainComponent } from './components/main/main.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { routing } from './app.routing';
     HeaderComponent,
     SectionComponent,
     FooterComponent,
-    ShopCartComponent
+    ShopCartComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
