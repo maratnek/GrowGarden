@@ -11,6 +11,9 @@ import { ShopCartComponent } from './components/shop-cart/shop-cart.component';
 import { routing } from './app.routing';
 import { MainComponent } from './components/main/main.component';
 
+import { GalleryService } from './services/gallery.service';
+import { ShopCartService } from './services/shop-cart.service';
+import { PaySystemComponent } from './components/pay-system/pay-system.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import { MainComponent } from './components/main/main.component';
     SectionComponent,
     FooterComponent,
     ShopCartComponent,
-    MainComponent
+    MainComponent,
+    PaySystemComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,7 @@ import { MainComponent } from './components/main/main.component';
     HttpModule,
     routing
   ],
-  providers: [],
+  providers: [GalleryService, ShopCartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -11,11 +11,7 @@ export class GalleryService {
 
   getGallery(){
   	return this.http.get('./image/resource.json')
-        .flatMap((data) => data.json())
-        ;
-  	// return this.http.get('http://jsonplaceholder.typicode.com/photos')
-   //      .flatMap((data) => data.json())
-   //      ;
+        .flatMap((data) => data.json());
   }
 
 }

@@ -131,25 +131,27 @@
 											<span class="glyphicon glyphicon-menu-right"></span>
 										</button>
 										<figure>
-											<img src={{name}} class="img-responsive" alt="Рассады">
-											<figcaption>{{title}}</figcaption>
+											<img src={{imgPath}} class="img-responsive" alt="Рассады">
+											<figcaption>{{shCart.title}}</figcaption>
 										</figure>
 										
 									</div>
-									<br>
+									<!-- <div class="clearfix"></div> -->
 								</div>
 								<div class="col-sm-6">
 									<label for="kol">Выберите количество</label>
-									<input type="number" value=1 min=1 max=100>
-									<h5 class='price' for="price">{{price}} <span class="glyphicons glyphicon-rub"></span></h5>
+									<input [(ngModel)]="rasCount" name="rasCount" type="number" value=1 min=1 max=100 >
+									<h5 class='price' for="price">
+										{{shCart.price}} <span class="glyphicons glyphicon-rub"></span>
+									</h5>
 									<label for="kol">Положите в корзину</label>
 									<button type="submit" class="btn-tomato" (click)="shopCartClick()">
 										В корзину <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
 									</button>
-									<div  class="shop-cart" *ngIf="isSpecial">
+									<a href="/shop-cart"  class="shop-cart" *ngIf="isSpecial">
 										<i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i>
 										<i class="fa fa-shopping-cart fa-lg"  aria-hidden="true"></i>
-									</div>
+									</a>
 								</div>
 							</fieldset>
 						</form>

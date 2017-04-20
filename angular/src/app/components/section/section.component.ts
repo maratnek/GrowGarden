@@ -1,46 +1,49 @@
+import { NgModule } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { GalleryService } from '../../services/gallery.service';
+import { ShopCartService } from '../../services/shop-cart.service';
 import 'rxjs/Rx';
 
 @Component({
   selector: 'app-section',
   templateUrl: './section.component.html',
   styleUrls: ['./section.component.sass'],
-  providers: [GalleryService]
+  providers: []
 })
 export class SectionComponent implements OnInit {
 	sortIndex: number;
-	gallerys = [];
 	clearFix: boolean;
-	name: string;
-	title: string;
+	imgPath: string;
+
+	shCart: Gallery;
+	gallerys = [];
 	imgAnimate = true;
-	price = 0;
 	isSpecial = false;
+	rasCount = 1;
 
 
-  constructor(private photoS: GalleryService) { 
+  constructor(private photoS: GalleryService,
+  						private shopCartS: ShopCartService) 
+  { 
+  	this.shCart = <Gallery>{};
   	this.sortIndex = 0; 
-    this.name = "./image/TomatGallery/tornadof1.jpg";
-    this.price = 10;
-    this.title = "Торнадо";
+    this.imgPath = "./image/TomatGallery/tornadof1.jpg";
+    this.shCart.price = 10;
+    this.shCart.title = "Торнадо";
 
   	this.photoS.getGallery()	
-        // .filter((gl: any) => gl.id < 25)
         .subscribe((res:any) => this.gallerys.push(res));
 
   }
 
   ngOnInit() {
-		// this.name = this.gallerys[0].path + this.gallerys[0].urlTom;
-		// this.price = this.gallerys[0].price;
+  	console.log('Init Section Component');
   }
 
 	showDivs(n) {
 		this.imgAnimate = true;
-		this.name = this.gallerys[n].path + this.gallerys[n].urlTom;
-		this.price = this.gallerys[n].price;
-		this.title = this.gallerys[n].title;
+		this.shCart = this.gallerys[n];
+		this.imgPath = this.shCart.path + this.shCart.urlTom;
 	}
 
 	plusDivs(n) {
@@ -56,15 +59,20 @@ export class SectionComponent implements OnInit {
 	shopCartClick(){
 		console.log('Shop Cart Click');
 		this.isSpecial = true;
+		this.shopCartS.addRassadaData(this.shCart.id, this.shCart.title, this.rasCount);
+
+
 	}
 
 
 }
 
 interface Gallery {
-	id: number;
 	albumId: number;
+	id: number;
 	title: string;
-	url: string;
-	thumbnailUrl: string;
+	price: number;
+	path: string;
+	urlTom: string;
+	urlRas: string;
 }
