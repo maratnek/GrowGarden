@@ -7,17 +7,12 @@ export class ShopCartService {
   	console.log('Shop Cart Service ...');
   }
 
-  addRassadaData(id, vid, count) {
+  addRassadaData(id, vid, count, price) {
   	console.log('Add data in localstorage ...');
-  	localStorage.setItem(id, JSON.stringify({id, vid, count}));
-  	// localStorage.setItem('vid', JSON.stringify(vid));
-  	// localStorage.setItem('count', count);
+  	localStorage.setItem(id, JSON.stringify({id, vid, count, price}));
   }
 
   loadShopCartData(){
-  	// const id = localStorage.getItem('id_vid');
-  	// const vid = localStorage.getItem('vid');
-  	// const count = localStorage.getItem('count');
   	let shCart = [];
   	for (var i=0,key,value; i < localStorage.length; i++) {
      // получаем имя ключа
@@ -30,11 +25,20 @@ export class ShopCartService {
   	return shCart;
   }
 
-  loggedIn(){
-  	// return tokenNotExpired();
+  getSum(){
+  	let shCart = this.loadShopCartData();
+  	let sum = shCart.reduce((sum,it) => {
+  		console.log(it.count, it.price, sum);
+  		return it.count * it.price + sum;
+  	},0);
+  	return sum;
   }
 
   clearShoppingCart(){
+  	localStorage.clear();
+  }
+
+  clearShoppingCartId(){
   	localStorage.clear();
   }
 

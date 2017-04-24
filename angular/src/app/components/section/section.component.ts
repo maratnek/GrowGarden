@@ -59,9 +59,7 @@ export class SectionComponent implements OnInit {
 	shopCartClick(){
 		console.log('Shop Cart Click');
 		this.isSpecial = true;
-		this.shopCartS.addRassadaData(this.shCart.id, this.shCart.title, this.rasCount);
-
-
+		this.shopCartS.addRassadaData(this.shCart.id, this.shCart.title, this.rasCount, this.shCart.price);
 	}
 
 

@@ -1,3 +1,27 @@
-<p>
-  pay-system works!
-</p>
+<section class="pay-section">
+	<div class="container">
+		<div class="row">
+			<div class="jumbotron col-xs-12 col-sm-6 col-md-4">
+				<form ngNoForm method="POST" action="https://money.yandex.ru/quickpay/confirm.xml"> 
+					<input type="hidden" name="receiver" value="410015185590859"> 
+					<!-- <input type="hidden" name="formcomment" value="Проект «Железный человек»: реактор холодного ядерного синтеза">  -->
+					<!-- <input type="hidden" name="short-dest" value="Проект «Железный человек»: реактор холодного ядерного синтеза">  -->
+					<input type="hidden" name="label" value="$order_id"> 
+					<input type="hidden" name="quickpay-form" value="shop"> 
+					<input type="hidden" name="successURL" value="/shop-cart"> 
+					<input type="hidden" name="targets" value="транзакция {order_id}"> 
+					<div class="input-group">
+					<input type="text" readonly class="form-control" name="sum" value={{moneyCheck}} data-type="number">
+					<div class="input-group-addon">руб.</div>
+					</div>
+					<div class="checkbox">
+						<label><input type="radio" name="paymentType" value="AC" checked>Банковской картой</label> 
+						<label><input type="radio" name="paymentType" value="PC">Яндекс.Деньгами</label> 
+						<label><input type="radio" name="paymentType" value="MC">С Мобильного</label> 
+					</div>
+					<input type="submit" value="Оплатить" class="btn btn-default"> 
+				</form>
+			</div>
+		</div>
+	</div>
+</section>

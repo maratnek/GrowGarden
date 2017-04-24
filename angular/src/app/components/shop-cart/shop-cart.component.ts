@@ -17,7 +17,8 @@ export class ShopCartComponent implements OnInit {
   		it => this.shopCartArray.push(it)
   		);
 		// console.log(this.shopCartArray);
-		this.shopCartArray.forEach(it => console.log(it.count));
+		this.shopCartArray.forEach(it => console.log(it));
+		console.log(shopCartS.getSum());
   }
 
   ngOnInit() {

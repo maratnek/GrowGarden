@@ -1,22 +1,25 @@
-<div class="container">
-	<div class="row">
-		
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">Корзина</h3>
-			</div>
-			<div class="panel-body">
-				<ul class="list-group" *ngIf="isExistShCt()">
-					<ng-container *ngFor="let item of shopCartArray">
-						<li class="list-group-item">
-						<span>{{item.vid}}</span> {{item.count}}
-						</li>
-					</ng-container>
-				</ul>
-			</div>
-		</div>
+<section class="shop-section">
+	<div class="container">
+		<div class="row">
 
-		<button type="reset" class="btn btn-default" (click)="clearShoppingCart()">Очистить Корзину</button>	
-		<button type="submit" class="btn btn-default" (click)="payShopping()">Перейти к оплате</button>	
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Корзина</h3>
+				</div>
+				<div class="panel-body">
+					<ul class="list-group" *ngIf="isExistShCt()">
+						<ng-container *ngFor="let item of shopCartArray">
+							<li class="list-group-item">
+								<span>{{item.vid}}</span> {{item.count}}
+							</li>
+						</ng-container>
+					</ul>
+				</div>
+			</div>
+
+			<button type="reset" class="btn btn-danger" (click)="clearShoppingCart()">Очистить Корзину</button>	
+			<button type="submit" class="btn btn-success" (click)="payShopping()">Перейти к оплате</button>	
+		</div>
 	</div>
-</div>
+
+</section>

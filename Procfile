@@ -1,0 +1,1 @@
+web: node ./angular/index.js
