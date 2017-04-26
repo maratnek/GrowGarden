@@ -10,6 +10,8 @@ var imagemin = require('gulp-imagemin'),
     gulp = require('gulp');
 
 var src = '../TomatGalleryFirst/**';
+var src_all = '../';
+var src_svg = '../svg_optim';
 var dst = '';
 var pub = '../TomatGallery/';
 
@@ -52,8 +54,24 @@ gulp.task('imagesmall', function () {
         // .pipe(rename(function (path){
         //     path.basename = path.basename.replace('','back')
         // }))
-        .pipe(cache(imagemin({progressive: true})))
+        .pipe(cache(imagemin({
+            progressive: true,
+            interlaced: true,
+            progressive: true
+            // optimizationLevel: 5
+        })))
         .pipe(gulp.dest(pub + ''));
+})
+
+gulp.task('imagesvg', function () {
+    return gulp.src(src_all + '**/*.svg')
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({plugins: [{removeViewBox: true}]})
+            ]))
+        .pipe(gulp.dest(src_svg + ''));
 })
 
 gulp.task('clearcache', function() { return cache.crearAll();});
