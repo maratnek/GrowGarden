@@ -62,7 +62,7 @@ export class SectionComponent implements OnInit {
 		this.shopCartS.addRassadaData(this.shCart.id, this.shCart.title, this.rasCount, this.shCart.price);
 	}
 
-
+  
 }
 
 interface Gallery {
