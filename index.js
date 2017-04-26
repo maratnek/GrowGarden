@@ -1,25 +1,30 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
+const path = require('path');
+const cors = require('cors');
 
-app.set('port', (process.env.PORT || 5000));
+// const users = require('./routes/users');
 
-app.use(express.static(__dirname + '/public'));
+// Port Number
+const port = process.env.PORT || 8080;
 
-// views is directory for all template files
-app.set('public', __dirname + '/public');
-//app.set('view engine', 'ejs');
+// CORS Middleware
+app.use(cors());
 
-app.get('/', function(request, response) {
+// Set Static Folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Index Route
+app.get('/', (req, res) => {
 	res.send('Invalid Endpoint');
-  // response.render('index');
 });
 
 app.get('*', (req, res) => {
-	res.sendFile(path.join(__dirname, 'index.html'));
+	res.sendFile(path.join(__dirname, 'public/index.html'));
 })
 
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
+// Start Server
+app.listen(port, () => {
+	console.log('Server started on port ' + port);
 });
-
 
