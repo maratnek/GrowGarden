@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const cors = require('cors');
-
+const compression = require('compression');
 // const users = require('./routes/users');
 
 // Port Number
@@ -10,6 +10,7 @@ const port = process.env.PORT || 8080;
 
 // CORS Middleware
 app.use(cors());
+app.use(compression());
 
 // Set Static Folder
 app.use(express.static(path.join(__dirname, 'public')));
