@@ -2,7 +2,8 @@
 
 
 var imagemin = require('gulp-imagemin'),
-    cache = require('gulp-cache')
+    cache = require('gulp-cache'),
+    gzip = require('gulp-gzip'),
     del = require('del'),
     imageResize = require('gulp-image-resize'),
     watermark = require('gulp-watermark'),
@@ -71,6 +72,7 @@ gulp.task('imagesvg', function () {
             imagemin.optipng({optimizationLevel: 5}),
             imagemin.svgo({plugins: [{removeViewBox: true}]})
             ]))
+        .pipe(gzip())
         .pipe(gulp.dest(src_svg + ''));
 })
 
