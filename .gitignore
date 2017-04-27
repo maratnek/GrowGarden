@@ -3,7 +3,7 @@
 # compiled output
 /dist
 /tmp
-/public_old
+public_old
 
 # dependencies
 /node_modules
