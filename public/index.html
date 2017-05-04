@@ -21,7 +21,7 @@
 			background-color: green;
 			animation: preloadmove 10s;
 			opacity: 0;
-			position: fixed;
+			/*position: fixed;*/
 			top: 0;
 			left: 0;
 		}
@@ -97,9 +97,36 @@
 <link href="styles.79d5c9e4692f326eaca8.bundle.css" rel="stylesheet"/></head>
 <body>
 
-	<!-- <div class="preloader"><div class="loader"></div></div> -->
+	<!-- <div class="preloader" id="preloader"><div class="loader"></div></div> -->
 
-	<app-root>Loading...</app-root>
+	<app-root>
+<!-- 	<script>
+		var preloader = document.getElementById('preloader');	
+		console.log(preloader);
+		var sessStore = window.sessionStorage;
+		console.log(sessStore);
+		if (typeof(sessStore) !== "undefined") {
+			console.log('Code for localStorage/sessionStorage.');
+		} else {
+			console.log(' Sorry! No Web Storage support..');
+		}
+		if (sessStore.getItem("lastname"))
+			preloader.style.display = 'none';
+		else
+			window.onload = function(){
+				console.log('Window OnLoad');
+				setTimeout(()=>{
+					preloader.style.display = 'none';
+					console.log('set timeout 	2000');
+				}, 2000);
+				sessStore.setItem("lastname", true);
+			}
+	</script>
+
+ -->		<div class="preloader" id="preloader">
+			<div class="loader"></div>
+		</div>
+	</app-root>
 	<script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
